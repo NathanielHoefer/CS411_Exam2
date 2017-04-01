@@ -33,12 +33,8 @@ int main()
 	input.push_back("ab12AB");
 	input.push_back("ab12A*");
 
-	// Number of loops per numbers/letters
-	int digitStrings = input.size() / 2;
-	int alphaStrings = input.size() - digitStrings - 1;
-
 	// Run digit tests
-	for (int i = 0; i < digitStrings; i++) {
+	for (int i = 0; i < 3; i++) {
 		cout << "digit : isValid(\"" + input[i] + "\"): ";
 		try {
 			if(digitVerification::isValid(input[i])) {
@@ -52,7 +48,7 @@ int main()
 	}
 
 	// Run letter tests
-	for (int i = alphaStrings; i < (int) input.size(); i++) {
+	for (int i = 3; i < 6; i++) {
 		cout << "alpha : isValid(\"" + input[i] + "\"): ";
 		try {
 			if(alphaVerification::isValid(input[i])) {
